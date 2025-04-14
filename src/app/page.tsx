@@ -2,13 +2,12 @@ import {Metadata} from 'next';
 
 import {Button} from '@/components/ui/button';
 
-const domainName = 'n8nwork.com';
-const headline = 'Sở hữu ngay tên miền n8nwork.com';
-const description = 'Tên miền cao cấp, lý tưởng cho các dự án tự động hóa và workflow.';
-const priceUSD = 189; // Giá dạng số để có thể định dạng
-const priceDisplay = '$189 USD'; // Giá hiển thị dạng chuỗi
-const contactLink = 'mailto:your-email@example.com'; // Hoặc link trang liên hệ, trang thanh toán,...
-const ctaButtonText = 'Liên hệ mua ngay';
+const domainName = process.env.DOMAINNAME;
+const headline = process.env.HEADLINE;
+const description = process.env.DESCRIPTION;
+const priceDisplay = process.env.PRICEUSD
+const contactLink = `mailto:${process.env.EMAIL}`
+const ctaButtonText = process.env.CTA_BUTTON_TEXT;
 
 export const metadata: Metadata = {
   title: 'Powerful Workflow Automation Software & Tools - n8n',
