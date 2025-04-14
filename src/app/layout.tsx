@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import {Geist, Geist_Mono} from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import './globals.css';
 
@@ -26,9 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">     
       <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1ZRCZCTQY"></script>
-        <script>{`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-N1ZRCZCTQY');`}</script>
+      <GoogleAnalytics gaId={process.env.GG_ANALYTICS} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
