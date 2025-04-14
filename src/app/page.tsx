@@ -1,12 +1,23 @@
+import {Metadata} from 'next';
+
 import {Button} from '@/components/ui/button';
 
 const domainName = 'n8nwork.com';
 const headline = 'Sở hữu ngay tên miền n8nwork.com';
 const description = 'Tên miền cao cấp, lý tưởng cho các dự án tự động hóa và workflow.';
-const priceUSD = 1500; // Giá dạng số để có thể định dạng
-const priceDisplay = '$1,500 USD'; // Giá hiển thị dạng chuỗi
+const priceUSD = 189; // Giá dạng số để có thể định dạng
+const priceDisplay = '$189 USD'; // Giá hiển thị dạng chuỗi
 const contactLink = 'mailto:your-email@example.com'; // Hoặc link trang liên hệ, trang thanh toán,...
 const ctaButtonText = 'Liên hệ mua ngay';
+
+export const metadata: Metadata = {
+  title: 'Powerful Workflow Automation Software & Tools - n8n',
+  description:
+    "n8n is a beast for automation. self-hosting and low-code make it a dev's dream. if you're not automating yet, you're working too hard. ... It blows my mind.",
+  openGraph: {
+    title: 'Powerful Workflow Automation Software & Tools - n8n',
+  },
+};
 
 export default function Home() {
   return (
